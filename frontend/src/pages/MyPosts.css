@@ -1,0 +1,115 @@
+.my-posts-container {
+  padding: 40px 0;
+  min-height: calc(100vh - 80px);
+}
+
+.my-posts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.my-posts-header h1 {
+  font-size: 32px;
+  color: var(--text-primary);
+}
+
+.posts-table-wrapper {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.posts-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.posts-table thead {
+  background: var(--bg-color);
+}
+
+.posts-table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 14px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.posts-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.posts-table tbody tr:hover {
+  background: var(--bg-color);
+}
+
+.post-title-cell {
+  max-width: 400px;
+}
+
+.post-link {
+  font-weight: 500;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.post-link:hover {
+  color: var(--primary-color);
+}
+
+.post-excerpt-small {
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin: 0;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: var(--bg-color);
+  color: var(--text-secondary);
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-icon:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-icon-danger:hover {
+  background: var(--danger-color);
+}
+
+@media (max-width: 768px) {
+  .my-posts-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .posts-table-wrapper {
+    overflow-x: auto;
+  }
+  
+  .posts-table {
+    min-width: 600px;
+  }
+}
